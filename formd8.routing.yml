@@ -1,0 +1,7 @@
+formd8.form:
+  path: '/formd8'
+  defaults:
+    _title: 'formd8'
+    _form: '\Drupal\formd8\Form\FormSubscribe'
+  requirements:
+    _permission: 'access content'

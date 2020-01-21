@@ -1,0 +1,73 @@
+<?php
+use Drupal\Core\Database\Database;
+
+function formd8_schema() {
+  $schema['form_1'] = array(
+    // Example (partial) specification for table "node".
+    'description' => 'The base table for nodes.',
+    'fields' => array(
+      'id' => array(
+        'description' => 'The primary identifier for a node.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'first_name' => array(
+        'description' => 'The first name of this node.',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'last_name' => array(
+        'description' => 'The node last name.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'email' => array(
+        'description' => 'The node email.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'phone' => array(
+        'description' => 'The node phone.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'select' => array(
+        'description' => 'The node select.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'message' => array(
+        'description' => 'The node message.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+    ),
+    'primary key' => array(
+      'id',
+    ),
+  );
+  return $schema;
+}
+//function formd8_update_8001() {
+//  $column = array(
+//   'description' =>'fid',
+//    'type' => 'int',
+//    'length' => 20,
+//    'not null' => FALSE,
+//  );
+//  $schema=Database::getConnection()->schema();
+//  $schema->addField('form_1','fid', $column);
+//}

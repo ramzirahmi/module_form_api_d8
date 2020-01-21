@@ -1,0 +1,5 @@
+name: formd8
+type: module
+description: 'module hello drupal 8'
+package: custom
+core: 8.x
